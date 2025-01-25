@@ -1,0 +1,139 @@
+.slot_booking_container {
+  align-items: start;
+  gap: 30px;
+  padding: 20px 15px;
+
+  .head {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+
+  .calender_container {
+    width: 45%;
+    max-width: 400px;
+
+    .calender_date_header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      .prev_icon,
+      .next_icon {
+        background: none;
+        border: none;
+        font-size: 1.5rem;
+        cursor: pointer;
+        transition: opacity 0.3s;
+
+        &:disabled {
+          opacity: 0.5;
+          cursor: not-allowed;
+        }
+      }
+
+      .head_date_display {
+        font-size: 1.25rem;
+        font-weight: bold;
+      }
+    }
+
+    .weekday_display_section {
+      display: grid;
+      grid-template-columns: repeat(7, 1fr);
+      gap: 1rem;
+      padding: 10px;
+
+      .font-semibold {
+        font-weight: bold;
+      }
+
+      .date_display {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        cursor: pointer;
+        transition: background-color 0.3s;
+
+        &.disable {
+          background-color: #f0f0f0;
+          color: #ccc;
+          cursor: not-allowed;
+        }
+
+        &.current_day {
+          background-color: var(--primary-light-bg-color);
+        }
+
+        &.selected_day {
+          background-color: var(--primary-dark-bg-color);
+          color: #fff;
+          font-weight: bold;
+        }
+
+        &:hover {
+          background-color: var(--primary-light-bg-color);
+        }
+      }
+    }
+  }
+
+  .slot_container {
+    width: 47%;
+
+    .slot_time {
+      gap: 15px;
+    }
+
+    .slot {
+      width: max-content;
+      background-color: #f7f7f7;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 5px;
+      text-align: center;
+      cursor: pointer;
+      font-size: 14px;
+      transition: background-color 0.3s, border 0.3s;
+
+      &.active {
+        background-color: var(--primary-dark-bg-color);
+        color: white;
+        border: 2px solid var(--primary-dark-bg-color);
+      }
+
+      &:hover {
+        background-color: var(--primary-light-bg-color);
+      }
+    }
+  }
+
+  .disable {
+    background-color: #f0f0f0;
+    color: #ccc;
+    cursor: not-allowed;
+  }
+
+  .text-gray-400 {
+    color: #b0bec5;
+  }
+
+  .cursor-not-allowed {
+    cursor: not-allowed;
+  }
+
+  @media only screen and (max-width: 500px) {
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0px;
+
+    & .calender_container,
+    .slot_container {
+      width: 100%;
+    }
+
+    & .slot {
+      padding: 4px !important;
+    }
+  }
+}
