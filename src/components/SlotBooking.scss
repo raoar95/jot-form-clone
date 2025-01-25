@@ -62,7 +62,8 @@
         }
 
         &.current_day {
-          background-color: var(--primary-light-bg-color);
+          background-color: var(--primary-dark-bg-color);
+          color: var(--text-white-color);
         }
 
         &.selected_day {

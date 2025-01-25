@@ -20,21 +20,9 @@ const daysOfWeek = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 
 const SlotBooking: React.FC = () => {
   const [currentDate, setCurrentDate] = useState<Date>(new Date());
-  const [selectedDate, setSelectedDate] = useState<Date | null>(null);
-  const [activeExpertID, setActiveExpertID] = useState<number | null>(1);
+  const [selectedDate, setSelectedDate] = useState<Date>(currentDate);
   const [activeID, setActiveID] = useState<number | null>(null);
   const [swiper, setSwiper] = useState<SwiperType | null>(null);
-
-  // Expert Card
-  const experts = [
-    { id: 1, name: "Anyone", experience: "3 - 8" },
-    { id: 2, name: "Expert 2", experience: "2 - 5" },
-    { id: 3, name: "Expert 3", experience: "5 - 10" },
-  ];
-
-  const handleCardClick = (id: number) => {
-    setActiveExpertID(id);
-  };
 
   // Calender
   const generateCalendarDays = (
