@@ -1,0 +1,15 @@
+@import url("https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+
+:root {
+  /* Fonts  */
+  --font: "Lato", serif;
+
+  /* Colors */
+  --primary-dark-bg-color: #4caf50;
+  --primary-light-bg-color: #d1edc1;
+  --text-white-color: whitesmoke;
+  --primary-text-black-color: #2e3334;
+  --text-dark-grey-color: #686868;
+  --text-light-grey-color: #a2a2a2;
+  --border-grey-color: #e0e0e0;
+}
